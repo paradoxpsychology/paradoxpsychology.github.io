@@ -1,0 +1,379 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Maven Pro';
+    max-width: 100%;
+    max-height: 100%;
+    line-height: 1.5;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    min-height:100vh;
+    width: 100vw;
+    overflow-wrap: break-word;
+}
+
+a {
+    color: deepskyblue;
+}
+
+a:visited {
+    color: lightskyblue;
+}
+
+.page-content a  {
+    color: mediumblue;
+}
+
+.page-content a:visited {
+    color: royalblue;
+}
+
+.contents-button {
+    color: mediumblue;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: medium;
+}
+
+.lander {
+    width: 100vw;
+    height: 100vh;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("./assets/meditation.jpg"); */
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    padding: 48px 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: left;
+    flex-direction: column;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.lander-visuals{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.lander-text {
+    margin: 2vh 2vw;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.lander-filler {
+    height: 50px;
+    width: 100vw;
+}
+
+.nav-container {
+    position: absolute;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar {
+    width: 100%;
+    min-height: 50px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 9;
+    flex-grow: 0;
+}
+
+.nav-bar * {
+    align-self: stretch;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-color: white;
+}
+
+.nav-bar a{
+    color: black;
+    flex-grow: 1;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    text-decoration: none;
+    text-align: center;
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+}
+
+.nav-bar a:hover,
+.nav-bar a.router-link-exact-active {
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+
+/* .logo {
+    height: 50px;
+    object-fit: cover;
+    filter: invert(1);
+    margin: 0 5px;
+} */
+
+/* .nav-bar a:hover .logo,
+.nav-item.router-link-exact-active .logo {
+    filter: invert(0);
+} */
+
+/* .svgIcon{
+    fill: white;
+}
+
+.menu-button:focus .svgIcon {
+    fill: white;
+}
+
+.menu-button:hover .svgIcon {
+    fill: black;
+} */
+
+.menu-button {
+    display: none;
+}
+
+.button {
+    background-color: white;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: black; /* Green */
+    color: white;
+  }
+
+.collapsible-content {
+    display: none;
+    overflow: hidden;
+}
+
+.avatar {
+    margin: 0 30px 0 0;
+    border-radius: 50%;
+    max-width: 20%;
+    max-height: 20%;
+    float: left;
+}
+
+.quote {
+    font-style: italic;
+    display: inline-block;
+    margin: 0 5vw;
+}
+
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-outer-frame {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking-system {
+    width: 100vw;
+    box-sizing: border-box;
+    border: 0;
+    height: calc(100vh - 50px);
+}
+
+.important-info {
+    background-color: #D98880;
+    padding: 20px;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    border: dotted red 2px;
+    border-radius: 10px;
+}
+
+.page-inner-frame {
+    flex-grow: 1;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-position:center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    padding: 8vh 0;
+    width:100%;
+    flex-grow: 0;
+}
+
+.hero-text {
+    text-align: center;
+    background-color:black;
+    color: white;
+    border: solid gray;
+    padding: 2vmax 2vmax;
+}
+
+.page-content {
+    text-align: justify;
+    text-justify: newspaper;
+    margin: 5vh 5vw;
+    max-width: 700px;
+}
+
+.question {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+    padding: 2.5vh 2.5vw;
+    box-sizing: border-box;
+    flex-grow: 0;
+}
+
+.footer-block {
+    width: 30vw;
+    box-sizing: border-box;
+    padding: 2.5vh 2.5vw;
+    text-align: left;
+}
+
+.footer-header {
+    color: gold;
+}
+
+.component-fade-enter-active, .component-fade-leave-active {
+    transition: opacity .4s ease;
+}
+.component-fade-enter, .component-fade-leave-to {
+    opacity: 0;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+.arrow {
+    fill: white;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .article-tile {
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 5px;
+    max-width: 330px;
+    padding: 10px;
+  }
+/* mobile */
+@media (max-width: 599px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-block {
+        width: 80vw;
+        text-align: center;
+    }
+    .logo {
+        display: none;
+    }
+    .menu-button {
+        display: flex;
+    }
+    .nav-item{
+        display: none;
+    }
+
+    .nav-bar.open .nav-item, .nav-bar.open a.router-link-exact-active {
+        display: flex;
+        padding: 13px 0;
+    }
+    .menu-button{
+        padding: 13px 0;
+        border-top: none;
+        border-bottom: none;
+    }
+    .nav-bar{
+        flex-direction: column;
+    }
+}
+
+/* tablet */
+@media (min-width: 600px) {
+}
+
+/* laptop */
+@media (min-width: 900px) {
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+}
+
+/* large screens
+@media (min-width: 1800px) {
+
+} */
