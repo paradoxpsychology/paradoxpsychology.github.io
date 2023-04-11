@@ -53,12 +53,12 @@
     after the appointment has been attended, as long as a valid referral from a GP has been provided.</p>
 </section>
 <section class="booking-container">
-    <p>Which location would you like to make a booking for?</p>
-    <button data-location-id="Deakin" class="location-button">Deakin</button>
-    <button data-location-id="OConnor" class="location-button">O'Connor</button>
+    <p class="location-select">Which location would you like to make a booking for?</p>
+    <button data-location-id="Deakin" class="location-button location-select">Deakin</button>
+    <button data-location-id="OConnor" class="location-button location-select">O'Connor</button>
 </section>
     <iframe src="https://www.halaxy.com/book/widget/psychologist/mr-david-odonohue/724811/837311" data-location-id="Deakin" class="location-content" style="display: none; width: 100%; height: 1000px"></iframe>
-    <iframe src="https://www.halaxy.com/book/widget/psychologist/mr-david-odonohue/724811/626281" data-location-id="OConnor" class="location-content" style="display: none;"></iframe>
+    <iframe src="https://www.halaxy.com/book/widget/psychologist/mr-david-odonohue/724811/626281" data-location-id="OConnor" class="location-content" style="display: none; width: 100%; height: 1000px"></iframe>
 
 
     </main>
@@ -68,17 +68,18 @@
     <script>
   const locationButtons = document.querySelectorAll('.location-button');
   const contentElements = document.querySelectorAll('.location-content');
+  const locationSelectElements = document.querySelectorAll('.location-select');
 
   locationButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      locationButtons.forEach(btn => btn.style.display = 'none');
-      contentElements.forEach(content => content.style.display = 'none');
+  button.addEventListener('click', () => {
+    locationSelectElements.forEach(selectElement => selectElement.style.display = 'none');
+    contentElements.forEach(content => content.style.display = 'none');
 
-      const locationId = button.getAttribute('data-location-id');
-      const contentElement = document.querySelector(`.location-content[data-location-id="${locationId}"]`);
-      contentElement.style.display = 'block';
-    });
+    const locationId = button.getAttribute('data-location-id');
+    const contentElement = document.querySelector(`.location-content[data-location-id="${locationId}"]`);
+    contentElement.style.display = 'block';
   });
+});
 
     </script>
 </body>
