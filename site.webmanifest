@@ -1,6 +1,6 @@
 {
-    "name": "Virtus Psychology",
-    "short_name": "Virtus",
+    "name": "Paradox Psychology",
+    "short_name": "Paradox",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -15,6 +15,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "/index.html/#/",
+    "start_url": "/index.html",
     "display": "standalone"
 }
