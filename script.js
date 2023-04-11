@@ -26,5 +26,5 @@ document.getElementById("toggle").addEventListener("click", function() {
   const heroSection = document.getElementById('hero');
   const randomImageIndex = Math.floor(Math.random() * imagesList.length);
   const selectedImage = imagesList[randomImageIndex];
-  // Set the background-image property with the image URL first, followed by the gradient
+  // Set the background-image property with the image URL
   heroSection.style.backgroundImage = `url('${selectedImage}')`;
