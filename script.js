@@ -1,31 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
     function loadComponent(component, elementId) {
-        fetch(component)
-            .then((response) => response.text())
-            .then((html) => {
-            document.getElementById(elementId).innerHTML = html;
-            })
-            .catch((error) => {
-            console.warn('Error loading', component, error);
-            });
-        }
-        
-    loadComponent('navbar.html', 'navbar-container');
-    loadComponent('footer.html', 'footer-container');
-    document.getElementById("toggle").addEventListener("click", function() {
-    const toggleButton = document.getElementById("toggle");
-    const navButtons = document.querySelectorAll(".nav-button");
-    
-    if (toggleButton.textContent === "Expand menu") {
-      for (const navButton of navButtons) {
-        navButton.style.display = "block";
-      }
-      toggleButton.textContent = "Collapse menu";
-    } else {
-      for (const navButton of navButtons) {
-        navButton.style.display = "none";
-      }
-      toggleButton.textContent = "Expand menu";
+      return fetch(component)
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById(elementId).innerHTML = html;
+        })
+        .catch((error) => {
+          console.warn('Error loading', component, error);
+        });
     }
+  
+    Promise.all([
+      loadComponent('navbar.html', 'navbar-container'),
+      loadComponent('footer.html', 'footer-container')
+    ]).then(() => {
+      document.getElementById("toggle").addEventListener("click", function() {
+        const toggleButton = document.getElementById("toggle");
+        const navButtons = document.querySelectorAll(".nav-button");
+  
+        if (toggleButton.textContent === "Expand menu") {
+          for (const navButton of navButtons) {
+            navButton.style.display = "block";
+          }
+          toggleButton.textContent = "Collapse menu";
+        } else {
+          for (const navButton of navButtons) {
+            navButton.style.display = "none";
+          }
+          toggleButton.textContent = "Expand menu";
+        }
+      });
+    });
   });
-});
+  
