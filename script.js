@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     Promise.all([
-      loadComponent('navbar.html', 'navbar-container'),
-      loadComponent('footer.html', 'footer-container')
+      loadComponent('/navbar.html', 'navbar-container'),
+      loadComponent('/footer.html', 'footer-container')
     ]).then(() => {
       document.getElementById("toggle").addEventListener("click", function() {
         const toggleButton = document.getElementById("toggle");
