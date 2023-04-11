@@ -41,13 +41,8 @@
         </script>
     </head>
     <body>
-        <nav id="navbar">
-            <button id="toggle" class="navbar-element">Expand menu</button>
-            <a href="index.html" class="navbar-element nav-button">Home</a>
-            <a href="booking.html" class="navbar-element nav-button">Booking</a>
-            <a href="resources.html" class="navbar-element nav-button">Resources</a>
-          </nav>
-
+        <div id="navbar-container"></div>
+          <div class="content-container">
           <main>
             <section id="hero">
                 <div class="hero-content">
@@ -84,29 +79,24 @@
     I do not offer psychological assessments. I also do not offer therapeutic services to clients under the age of 18.</p>
   </section>
         </main>
-        <footer>
-            <div class="footer-block">
-                Opening hours<br>
-            Tuesday: 10am to 2pm<br>
-            Wednesday: 10am to 6pm<br>
-            Thursday: 10am to 2pm<br>
-            </div>
-            <div class="footer-block">
-                Address<br>
-                <a href="https://www.google.com/maps/search/?api=1&query=Virtus+Psychology">Capital Clinical Psychology<br>
-                Level 1, 5 Sargood Street<br>
-                O'Connor, ACT, 2602</a>
-                <br><br>
-                <a href="https://www.google.com/maps/search/?api=1&query=Lantern+Psychology+Centre">Lantern Psychology Centre<br>
-                Unit 5, 10 Thesiger Court<br>
-                Deakin, ACT, 2600</a>
-            </div>
-            <div class="footer-block">
-                Contact details<br>
-                Email: <a href="mailto:paradoxpsychology@gmail.com">paradoxpsychology@gmail.com</a><br>
-                Fax: +61 2 9182 5418
-            </div>
-        </footer>
+        <div id="footer-container"></div>
+        </div>
         <script src="script.js"></script>
+        <script>
+            (function setRandomHeroImage() {
+              const imagesList = [
+                "./assets/yoga.webp",
+                "./assets/balance.webp",
+                "./assets/lotus.webp",
+                "./assets/ripple.webp",
+                "./assets/lotus2.webp"
+              ];
+      
+              const heroSection = document.getElementById('hero');
+              const randomImageIndex = Math.floor(Math.random() * imagesList.length);
+              const selectedImage = imagesList[randomImageIndex];
+              heroSection.style.backgroundImage = `url('${selectedImage}')`;
+            })();
+          </script>
     </body>
 </html>

@@ -15,16 +15,16 @@ document.getElementById("toggle").addEventListener("click", function() {
     }
   });
 
-  const imagesList = [
-    "./assets/yoga.webp",
-    "./assets/balance.webp",
-    "./assets/lotus.webp",
-    "./assets/ripple.webp",
-    "./assets/lotus2.webp"
-  ];
+  function loadComponent(component, elementId) {
+    fetch(component)
+      .then((response) => response.text())
+      .then((html) => {
+        document.getElementById(elementId).innerHTML = html;
+      })
+      .catch((error) => {
+        console.warn('Error loading', component, error);
+      });
+  }
   
-  const heroSection = document.getElementById('hero');
-  const randomImageIndex = Math.floor(Math.random() * imagesList.length);
-  const selectedImage = imagesList[randomImageIndex];
-  // Set the background-image property with the image URL
-  heroSection.style.backgroundImage = `url('${selectedImage}')`;
+  loadComponent('navbar.html', 'navbar-container');
+  loadComponent('footer.html', 'footer-container');

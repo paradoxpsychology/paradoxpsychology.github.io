@@ -48,6 +48,7 @@
   
   main {
     padding-top: 38px;
+    flex: 1;
     /* Add more padding if needed depending on the navbar height */
   }
   
@@ -147,6 +148,36 @@ h2{
 
 section {
     padding: 1rem;
+}
+
+.booking-container {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.location-button {
+    background-color: transparent;
+    border: 1px solid #5d3f7a;
+    color: #5d3f7a;
+    cursor: pointer;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .location-button:hover {
+    background-color: #5d3f7a;
+    color: #ffffff;
+  }
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 @media (max-width: 767px) {
