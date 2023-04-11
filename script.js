@@ -1,4 +1,5 @@
-document.getElementById("toggle").addEventListener("click", function() {
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("toggle").addEventListener("click", function() {
     const toggleButton = document.getElementById("toggle");
     const navButtons = document.querySelectorAll(".nav-button");
     
@@ -28,3 +29,4 @@ document.getElementById("toggle").addEventListener("click", function() {
   
   loadComponent('navbar.html', 'navbar-container');
   loadComponent('footer.html', 'footer-container');
+});
