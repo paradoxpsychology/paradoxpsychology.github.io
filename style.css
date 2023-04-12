@@ -47,7 +47,7 @@
   }
   
   main {
-    padding-top: 38px;
+    margin-top: 38px;
     flex: 1;
     /* Add more padding if needed depending on the navbar height */
   }

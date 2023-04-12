@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
           toggleButton.textContent = "Expand menu";
         }
       });
+      function adjustMainOffset() {
+        const navbar = document.getElementById("navbar");
+        const main = document.getElementById("main");
+        const navbarHeight = navbar.offsetHeight;
+      
+        main.style.marginTop = `${navbarHeight}px`;
+      }
+      adjustMainOffset();
+      window.addEventListener("resize", adjustMainOffset);
     });
   });
   
