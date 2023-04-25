@@ -1,3 +1,12 @@
+:root {
+    --yinblack: #272727;
+    --yangwhite: #F6F6F6;
+    --balancepurple: #8D6AA8;
+    --harmonygreen: #7EB984;
+    --serenitylavender: #C0B1D9;
+    --growthlime: #C8D95B;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -14,8 +23,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--yangwhite);
+    color: var (var(--yinblack));
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -26,8 +35,8 @@
   .navbar-element {
     text-align: center;
     padding: 10px;
-    color: black;
-    background-color: white;
+    color: var(--yinblack);
+    background-color: var(--serenitylavender);
     cursor: pointer;
     border: none;
     font-size: 1rem;
@@ -42,8 +51,8 @@
   }
   
   .navbar-element:hover {
-    background-color: #5d3f7a;
-    color: white;
+    background-color: var(--balancepurple);
+    color: var(--yangwhite);
   }
   
   main {
@@ -65,7 +74,7 @@
   
   .hero-content {
     text-align: center;
-    color: #ffffff;
+    color: var(--yangwhite);
     max-width: 80%;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.4);
@@ -86,16 +95,16 @@
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--serenitylavender);
+    color: var(--yinblack);
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
   }
   
   .cta-button:hover {
-    background-color: #5d3f7a;
-    color: white;
+    background-color: var(--balancepurple);
+    color: var(--yangwhite);
   }
 
   footer {
@@ -104,8 +113,8 @@
     justify-content: space-evenly;
     align-items: stretch;
     flex-wrap: wrap;
-    background-color: #2c2c2c;
-    color: white;
+    background-color: var(--yinblack);
+    color: var(--yangwhite);
     padding: 2.5vh 2.5vw;
     box-sizing: border-box;
 }
@@ -118,12 +127,12 @@
 }
 
 footer a {
-    color: #b3b3b3;
+    color: var(--growthlime);
     text-decoration: none;
   }
 
 footer a:hover {
-    color: #5d3f7a; /* Apply the same hover color as other links */
+    color: var(var(--harmonygreen)); /* Apply the same hover color as other links */
   }
   
 
@@ -158,8 +167,8 @@ section {
 
 .location-button {
     background-color: transparent;
-    border: 1px solid #5d3f7a;
-    color: #5d3f7a;
+    border: 1px solid var(--balancepurple);
+    color: var(--balancepurple);
     cursor: pointer;
     font-family: 'Maven Pro', sans-serif;
     font-size: 16px;
@@ -170,8 +179,8 @@ section {
   }
   
   .location-button:hover {
-    background-color: #5d3f7a;
-    color: #ffffff;
+    background-color: var(--balancepurple);
+    color: var(--yangwhite);
   }
 
 .content-container{
