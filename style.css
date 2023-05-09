@@ -53,7 +53,7 @@
   .navbar-element {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     padding: 10px;
     color: var(--yinblack);
     background-color: var(--yangwhite);
