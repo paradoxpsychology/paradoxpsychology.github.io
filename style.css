@@ -66,6 +66,10 @@
     display: block;
   }
 
+  .navbar-element:hover .logo {
+    filter: invert(1);
+  }
+
   #toggle {
     display: none;
   }
