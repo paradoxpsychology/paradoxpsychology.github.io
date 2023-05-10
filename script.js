@@ -42,7 +42,15 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     
-    adjustMainOffset();
+    function waitForAnimationFrame() {
+      return new Promise(resolve => {
+        requestAnimationFrame(resolve);
+      });
+    }
+    
+    waitForAnimationFrame().then(() => {
+      adjustMainOffset();
+    });
     window.addEventListener('resize', adjustMainOffset);
   });
 });
