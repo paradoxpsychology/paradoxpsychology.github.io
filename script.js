@@ -33,10 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
     function adjustMainOffset() {
       const navbar = document.getElementById('navbar');
       const main = document.getElementById('main');
-      const navbarHeight = navbar.offsetHeight;
-
-      main.style.marginTop = `${navbarHeight}px`;
+    
+      if (navbar && main) {
+        const navbarHeight = navbar.offsetHeight;
+        main.style.marginTop = `${navbarHeight}px`;
+      } else {
+        console.warn('Error: navbar or main element not found');
+      }
     }
+    
     adjustMainOffset();
     window.addEventListener('resize', adjustMainOffset);
   });
