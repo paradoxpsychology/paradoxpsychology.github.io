@@ -35,22 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
       const main = document.querySelector('main');
     
       if (navbar && main) {
-        const navbarHeight = navbar.offsetHeight;
+        const navbarHeight = navbar.offsetHeight; 
         main.style.marginTop = `${navbarHeight}px`;
       } else {
         console.warn('Error: navbar or main element not found');
       }
     }
     
-    function waitForAnimationFrame() {
-      return new Promise(resolve => {
-        requestAnimationFrame(resolve);
-      });
-    }
-    
-    waitForAnimationFrame().then(() => {
-      adjustMainOffset();
-    });
+    adjustMainOffset();
     window.addEventListener('resize', adjustMainOffset);
   });
 });
