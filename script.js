@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     function adjustMainOffset() {
       const navbar = document.getElementById('navbar');
-      const main = document.getElementById('main');
+      const main = document.querySelector('main');
     
       if (navbar && main) {
         const navbarHeight = navbar.offsetHeight;
