@@ -30,10 +30,24 @@
       transform: rotate(-360deg);
     }
   }
+
+  @keyframes invert-logo {
+    0% {
+      filter: invert(0%);
+    }
+    50% {
+      filter: invert(100%);
+    }
+    100% {
+      filter: invert(0%);
+    }
+  }
+  
   
   .logo {
-    animation: rotate-logo 10s linear infinite;
+    animation: rotate-logo 10s linear infinite, invert-logo 10s linear infinite;
   }
+  
   
   
   #navbar {
@@ -65,9 +79,9 @@
     flex: 1;
   }
 
-  .navbar-element:hover .logo {
+  /* .navbar-element:hover .logo {
     filter: invert(1);
-  }
+  } */
 
   .logo {
     padding: 0 20px;
