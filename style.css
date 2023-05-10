@@ -16,39 +16,7 @@
   
   body {
     font-family: Arial, sans-serif;
-  }
-
-  .logo {
-
-  }
-
-  @keyframes rotate-logo {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
-
-  @keyframes invert-logo {
-    0% {
-      filter: invert(0%);
-    }
-    50% {
-      filter: invert(100%);
-    }
-    100% {
-      filter: invert(0%);
-    }
-  }
-  
-  
-  .logo {
-    animation: rotate-logo 10s linear infinite, invert-logo 10s linear infinite;
-  }
-  
-  
+  }  
   
   #navbar {
     position: fixed;
@@ -68,7 +36,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     color: var(--yinblack);
     background-color: var(--yangwhite);
     cursor: pointer;
@@ -79,12 +46,12 @@
     flex: 1;
   }
 
-  /* .navbar-element:hover .logo {
+  .navbar-element:hover .logo {
     filter: invert(1);
-  } */
+  }
 
   .logo {
-    padding: 0 20px;
+    padding: 0 17.5px;
   }
 
   #toggle {
