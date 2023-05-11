@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (navbar && main) {
         const navbarHeight = navbar.offsetHeight; 
         main.style.marginTop = `${navbarHeight}px`;
+        console.log("height: ", navbarHeight);
       } else {
         console.warn('Error: navbar or main element not found');
       }
