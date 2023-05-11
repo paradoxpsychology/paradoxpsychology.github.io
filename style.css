@@ -30,7 +30,6 @@
     justify-content: center;
     align-items: stretch;
     z-index: 100;
-    min-height: 50px;
   }
   
   .navbar-element {
@@ -45,6 +44,7 @@
     text-decoration: none;
     transition: background-color 0.3s;
     flex: 1;
+    min-height: 50px;
   }
 
   .navbar-element:hover .logo {
