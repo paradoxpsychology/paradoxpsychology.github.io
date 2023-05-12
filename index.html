@@ -48,6 +48,7 @@
                 <div class="hero-content">
                 <h1>David O'Donohue</h1>
                 <p class="tagline">Psychologist | Clinical Psychology Registrar</p>
+                <p id="random-quote" class="random-quote"></p>
                 <a href="booking.html" class="cta-button">Book an Appointment</a>
                 </div>
             </section>
@@ -83,20 +84,48 @@
         </div>
         <script src="script.js"></script>
         <script>
-            (function setRandomHeroImage() {
-              const imagesList = [
-                "./assets/yoga.webp",
-                "./assets/balance.webp",
-                "./assets/lotus.webp",
-                "./assets/ripple.webp",
-                "./assets/lotus2.webp"
-              ];
-      
-              const heroSection = document.getElementById('hero');
-              const randomImageIndex = Math.floor(Math.random() * imagesList.length);
-              const selectedImage = imagesList[randomImageIndex];
-              heroSection.style.backgroundImage = `url('${selectedImage}')`;
-            })();
+function setRandomHeroImage() {
+  const imagesList = [
+    "./assets/yoga.webp",
+    "./assets/balance.webp",
+    "./assets/lotus.webp",
+    "./assets/ripple.webp",
+    "./assets/lotus2.webp"
+  ];
+
+  const heroSection = document.getElementById('hero');
+  const randomImageIndex = Math.floor(Math.random() * imagesList.length);
+  const selectedImage = imagesList[randomImageIndex];
+  heroSection.style.backgroundImage = `url('${selectedImage}')`;
+}
+
+function displayRandomQuote() {
+  const quotes = [
+    "Opposition brings concord. Out of discord comes the fairest harmony - Heraclitus",
+    "The curious paradox is that when I accept myself just as I am, then I can change - Carl Rogers",
+    "Seek the coldness of the moon and ye shall find the heat of the sun - Socrates",
+    "Paradox is the natural medium for expressing transconscious facts - Carl Jung",
+    "The wound is the place where the Light enters you - Rumi",
+    "If one wishes to weaken it, one must first strengthen it - Lao Tzu"
+    // Add more quotes as needed
+  ];
+
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  const randomQuote = quotes[randomIndex];
+  const quoteElement = document.getElementById("random-quote");
+
+  if (quoteElement) {
+    quoteElement.textContent = randomQuote;
+  } else {
+    console.warn("Error: random-quote element not found");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  setRandomHeroImage();
+  displayRandomQuote();
+});
+
           </script>
     </body>
 </html>
